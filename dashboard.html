@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard – Bsons Inc Crypto Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    body { background: radial-gradient(circle at center, #0f172a 0%, #020617 80%); color: #e2e8f0; }
+    .glass { background: rgba(15,23,42,0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.08); }
+    .neon-green { color: #10b981; text-shadow: 0 0 10px #10b981; }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- Navbar (Full Header) -->
+  <nav class="sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      <div class="flex-1 flex justify-center md:justify-start">
+        <div class="text-center md:text-left">
+          <span class="text-3xl md:text-4xl font-bold tracking-tighter bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Bsons</span>
+          <span class="text-3xl md:text-4xl font-bold tracking-tighter text-orange-400">Inc</span>
+          <div class="text-xs md:text-sm text-cyan-400 tracking-widest font-medium mt-1">CRYPTO HUB</div>
+        </div>
+      </div>
+
+      <div class="hidden md:flex items-center gap-8 text-sm">
+        <a href="../index.html" class="hover:text-green-400 transition">Home</a>
+        <a href="community.html" class="hover:text-green-400 transition">Community</a>
+        <a href="plans.html" class="hover:text-green-400 transition">Plans</a>
+        <a href="long-term.html" class="hover:text-green-400 transition">Long Term Investment</a>
+        <a href="blog.html" class="hover:text-green-400 transition">Blog</a>
+        <a href="faqs.html" class="hover:text-green-400 transition">FAQs</a>
+        <a href="contact.html" class="hover:text-green-400 transition">Contact Us</a>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <a href="get-started.html" class="bg-green-600 hover:bg-green-500 px-5 py-2 rounded-lg text-sm font-medium">Get Started</a>
+        <a href="login.html" class="text-sm hover:text-green-400">Login</a>
+        <button id="menu-toggle" class="md:hidden text-white focus:outline-none" aria-expanded="false" aria-controls="mobile-menu">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Fixed Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 translate-x-full transition-transform duration-500 ease-in-out">
+      <div class="absolute right-0 top-0 h-full w-4/5 max-w-sm bg-gray-900/95 backdrop-blur-xl border-l border-green-500/30 shadow-2xl overflow-y-auto">
+        <button id="menu-close" class="absolute top-5 right-5 text-white text-3xl focus:outline-none hover:text-green-400 transition">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="px-8 py-20 space-y-8 text-center">
+          <a href="../pages/community.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">Community</a>
+          <a href="../pages/plans.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">Plans</a>
+          <a href="../pages/long-term.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">Long Term Investment</a>
+          <a href="../pages/blog.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">Blog</a>
+          <a href="../pages/faqs.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">FAQs</a>
+          <a href="../pages/contact.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Dashboard Content -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+    <h1 class="text-5xl font-bold text-center mb-12 neon-green">Your Dashboard</h1>
+
+    <div class="glass rounded-3xl p-8 md:p-12">
+      <h2 class="text-4xl font-bold text-center mb-10">Welcome Back, Trader!</h2>
+
+      <!-- Free Tier / Upgrade Prompt -->
+      <div class="text-center mb-16">
+        <p class="text-2xl mb-6 text-yellow-400">You are on the **Free Plan**</p>
+        <p class="text-lg mb-8">
+          Unlock full access to bots, live signals, priority support, and more.
+        </p>
+        <a href="plans.html" class="inline-block bg-purple-600 hover:bg-purple-500 px-12 py-6 rounded-xl text-2xl font-bold shadow-lg shadow-purple-500/40 transition transform hover:scale-105">
+          Upgrade to Premium Now →
+        </a>
+      </div>
+
+      <!-- Premium Dashboard Placeholder (hidden until subscribed) -->
+      <div class="hidden">
+        <h3 class="text-3xl font-bold mb-8 neon-green">Premium Features Active</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="glass p-6 rounded-2xl text-center">
+            <i class="fas fa-robot text-6xl text-green-400 mb-4"></i>
+            <h4 class="text-xl font-bold mb-2">Active Bots</h4>
+            <p class="text-3xl font-bold">3 Running</p>
+          </div>
+          <div class="glass p-6 rounded-2xl text-center">
+            <i class="fas fa-chart-line text-6xl text-green-400 mb-4"></i>
+            <h4 class="text-xl font-bold mb-2">Portfolio Value</h4>
+            <p class="text-3xl font-bold">$12,450.00</p>
+          </div>
+          <div class="glass p-6 rounded-2xl text-center">
+            <i class="fas fa-bolt text-6xl text-green-400 mb-4"></i>
+            <h4 class="text-xl font-bold mb-2">Today's Profit</h4>
+            <p class="text-3xl font-bold text-green-400">+4.82%</p>
+          </div>
+        </div>
+        <!-- Add more premium widgets later (signals, alerts, etc.) -->
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="../index.html" class="text-green-400 hover:underline">← Back to Home</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Minimal Footer -->
+  <footer class="bg-black/90 border-t border-gray-800 py-8 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+      <img src="../assets/images/logo.png" alt="Bsons Inc" class="h-10 mx-auto mb-4">
+      <p class="text-sm text-gray-500">© 2026 Bsons Inc Crypto Hub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuClose = document.getElementById('menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    function openMenu() {
+      mobileMenu.classList.remove('translate-x-full');
+      mobileMenu.classList.add('translate-x-0');
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.remove('translate-x-0');
+      mobileMenu.classList.add('translate-x-full');
+    }
+
+    if (menuToggle) menuToggle.addEventListener('click', openMenu);
+    if (menuClose) menuClose.addEventListener('click', closeMenu);
+
+    if (mobileMenu) {
+      mobileMenu.addEventListener('click', (e) => {
+        if (e.target === mobileMenu) closeMenu();
+      });
+    }
+  </script>
+
+</body>
+</html>

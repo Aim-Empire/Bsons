@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Custom Plan Request – Bsons Inc Crypto Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    body { background: radial-gradient(circle at center, #0f172a 0%, #020617 80%); color: #e2e8f0; }
+    .glass { background: rgba(15,23,42,0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.08); }
+    .neon-green { color: #10b981; text-shadow: 0 0 10px #10b981; }
+
+    /* Popup - Rectangular & Visible */
+    #success-popup {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease;
+    }
+    #success-popup.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    #popup-box {
+      background: #0f172a;
+      border: 3px solid #10b981;
+      width: 90%;
+      max-width: 520px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 0 40px rgba(16, 185, 129, 0.6);
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      <div class="flex-1 flex justify-center md:justify-start">
+        <div class="text-center md:text-left">
+          <span class="text-3xl md:text-4xl font-bold tracking-tighter bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Bsons</span>
+          <span class="text-3xl md:text-4xl font-bold tracking-tighter text-orange-400">Inc</span>
+          <div class="text-xs md:text-sm text-cyan-400 tracking-widest font-medium mt-1">CRYPTO HUB</div>
+        </div>
+      </div>
+
+      <div class="hidden md:flex items-center gap-8 text-sm">
+        <a href="../index.html" class="hover:text-green-400 transition">Home</a>
+        <a href="community.html" class="hover:text-green-400 transition">Community</a>
+        <a href="plans.html" class="hover:text-green-400 transition">Plans</a>
+        <a href="long-term.html" class="hover:text-green-400 transition">Long Term Investment</a>
+        <a href="blog.html" class="hover:text-green-400 transition">Blog</a>
+        <a href="faqs.html" class="hover:text-green-400 transition">FAQs</a>
+        <a href="contact.html" class="hover:text-green-400 transition">Contact Us</a>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <a href="../pages/get-started.html" class="bg-green-600 hover:bg-green-500 px-5 py-2 rounded-lg text-sm font-medium">Get Started</a>
+        <a href="../pages/login.html" class="text-sm hover:text-green-400">Login</a>
+        <button id="menu-toggle" class="md:hidden text-white focus:outline-none" aria-expanded="false" aria-controls="mobile-menu">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+
+<!-- Modern Slide-in Mobile Menu -->
+<div id="mobile-menu" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 translate-x-full transition-transform duration-500 ease-in-out">
+  <div class="absolute right-0 top-0 h-full w-4/5 max-w-sm bg-gray-900/95 backdrop-blur-xl border-l border-green-500/30 shadow-2xl overflow-y-auto">
+    <button id="menu-close" class="absolute top-5 right-5 text-white text-3xl focus:outline-none hover:text-green-400 transition">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="px-8 py-20 space-y-8 text-center">
+      <a href="pages/community.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">Community</a>
+      <a href="pages/plans.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">Plans</a>
+      <a href="pages/long-term.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">Long Term Investment</a>
+      <a href="pages/blog.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">Blog</a>
+      <a href="pages/faqs.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">FAQs</a>
+      <a href="pages/contact.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">Contact Us</a>
+    </div>
+  </div>
+</div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+    <h1 class="text-5xl font-bold text-center mb-12 neon-green">Custom Plan Request</h1>
+
+    <div class="glass rounded-3xl p-8 md:p-12 max-w-4xl mx-auto">
+      <p class="text-xl text-center mb-8">
+        Need something beyond our standard plans? Tell us exactly what you want — we’ll build a custom package just for you.
+      </p>
+
+      <form id="custom-form" class="space-y-6">
+        <div>
+          <label class="block text-lg font-medium mb-2">Your Name</label>
+          <input type="text" required placeholder="Full Name" class="w-full px-6 py-4 rounded-xl bg-gray-900 border border-gray-700 focus:border-green-500 focus:outline-none">
+        </div>
+
+        <div>
+          <label class="block text-lg font-medium mb-2">Email Address</label>
+          <input type="email" required placeholder="you@example.com" class="w-full px-6 py-4 rounded-xl bg-gray-900 border border-gray-700 focus:border-green-500 focus:outline-none">
+        </div>
+
+        <div>
+          <label class="block text-lg font-medium mb-2">Desired Features / Bots</label>
+          <textarea rows="4" required placeholder="Example: 10+ custom AI bots, high-frequency trading, dedicated server, etc." class="w-full px-6 py-4 rounded-xl bg-gray-900 border border-gray-700 focus:border-green-500 focus:outline-none resize-none"></textarea>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-lg font-medium mb-2">Monthly Budget</label>
+            <input type="text" placeholder="$500 – $5000 (or range)" class="w-full px-6 py-4 rounded-xl bg-gray-900 border border-gray-700 focus:border-green-500 focus:outline-none">
+          </div>
+          <div>
+            <label class="block text-lg font-medium mb-2">Preferred Payment Method</label>
+            <select class="w-full px-6 py-4 rounded-xl bg-gray-900 border border-gray-700 focus:border-green-500 focus:outline-none">
+              <option>Crypto (BTC, ETH, USDT, etc.)</option>
+              <option>Credit/Debit Card</option>
+              <option>Bank Transfer</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="text-center mt-10">
+          <button type="submit" class="inline-block bg-purple-600 hover:bg-purple-500 px-12 py-6 rounded-xl text-2xl font-bold shadow-lg shadow-purple-500/30">
+            Send Custom Request
+          </button>
+        </div>
+      </form>
+
+      <p class="text-center text-sm text-gray-400 mt-8">
+        We'll review your request and reply within 24 hours with a custom quote.
+      </p>
+
+      <div class="text-center mt-8">
+        <a href="plans.html" class="text-green-400 hover:underline">← Back to Plans</a>
+        <span class="mx-4 text-gray-500">•</span>
+        <a href="../index.html" class="text-green-400 hover:underline">Back to Home</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black/90 border-t border-gray-800 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-4 gap-12">
+      <div>
+        <img src="../assets/images/logo.png" alt="Bsons Inc" class="h-12 mb-4">
+        <p class="text-gray-400 text-sm">Trade Smart • Invest Wise • Grow Together</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+        <div class="flex flex-wrap gap-2">
+          <a href="../index.html" class="px-4 py-2 bg-gray-800 hover:bg-green-600 rounded-lg text-sm transition">Home</a>
+          <a href="community.html" class="px-4 py-2 bg-gray-800 hover:bg-green-600 rounded-lg text-sm transition">Community</a>
+          <a href="plans.html" class="px-4 py-2 bg-gray-800 hover:bg-green-600 rounded-lg text-sm transition">Plans</a>
+          <a href="blog.html" class="px-4 py-2 bg-gray-800 hover:bg-green-600 rounded-lg text-sm transition">Blog</a>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Company</h3>
+        <div class="flex flex-wrap gap-2">
+          <a href="long-term.html" class="px-4 py-2 bg-gray-800 hover:bg-green-600 rounded-lg text-sm transition">Long Term Investment</a>
+          <a href="faqs.html" class="px-4 py-2 bg-gray-800 hover:bg-green-600 rounded-lg text-sm transition">FAQs</a>
+          <a href="contact.html" class="px-4 py-2 bg-gray-800 hover:bg-green-600 rounded-lg text-sm transition">Contact Us</a>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Connect</h3>
+        <div class="flex gap-6 text-3xl">
+          <a href="https://www.linkedin.com/in/t-philip-bourgeois-15400226" class="hover:text-green-400"><i class="fab fa-linkedin"></i></a>
+          <i class="fab fa-telegram text-gray-600 cursor-not-allowed"></i>
+          <i class="fab fa-twitter text-gray-600 cursor-not-allowed"></i>
+        </div>
+        <p class="mt-6 text-sm">support@bsonsinc.com</p>
+        <p class="text-sm text-gray-500 mt-8">© 2026 Bsons Inc Crypto Hub. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Rectangular Visible Popup -->
+  <div id="success-popup">
+    <div id="popup-box">
+      <i class="fas fa-check-circle text-6xl text-green-400 mb-6"></i>
+      <h2 class="text-3xl font-bold mb-4 neon-green">Request Sent!</h2>
+      <p class="text-lg mb-6">Custom plan request sent successfully!<br>Our team will contact you within 24 hours with a personalized quote.</p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile menu toggle
+const menuToggle = document.getElementById('menu-toggle');
+const menuClose = document.getElementById('menu-close');
+const mobileMenu = document.getElementById('mobile-menu');
+
+function openMenu() {
+  mobileMenu.classList.remove('translate-x-full');
+  mobileMenu.classList.add('translate-x-0');
+}
+
+function closeMenu() {
+  mobileMenu.classList.remove('translate-x-0');
+  mobileMenu.classList.add('translate-x-full');
+}
+
+if (menuToggle) menuToggle.addEventListener('click', openMenu);
+if (menuClose) menuClose.addEventListener('click', closeMenu);
+
+if (mobileMenu) {
+  mobileMenu.addEventListener('click', (e) => {
+    if (e.target === mobileMenu) closeMenu();
+  });
+}
+    }
+
+    // Form submit → show popup
+    const form = document.getElementById('custom-form');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault(); // prevent page reload
+        showPopup();
+        this.reset(); // clear form
+      });
+    }
+
+    function showPopup() {
+      const popup = document.getElementById('success-popup');
+      popup.classList.add('visible');
+      setTimeout(() => {
+        popup.classList.remove('visible');
+      }, 5000); // stay visible for 5 seconds
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Get Started – Bsons Inc Crypto Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    body { background: radial-gradient(circle at center, #0f172a 0%, #020617 80%); color: #e2e8f0; }
+    .glass { background: rgba(15,23,42,0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.08); }
+    .neon-green { color: #10b981; text-shadow: 0 0 10px #10b981; }
+
+    #success-popup {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease;
+    }
+    #success-popup.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    #popup-box {
+      background: #0f172a;
+      border: 3px solid #10b981;
+      width: 90%;
+      max-width: 520px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 0 40px rgba(16, 185, 129, 0.6);
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- Full Navbar (Header) -->
+  <nav class="sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      <div class="flex-1 flex justify-center md:justify-start">
+        <div class="text-center md:text-left">
+          <span class="text-3xl md:text-4xl font-bold tracking-tighter bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Bsons</span>
+          <span class="text-3xl md:text-4xl font-bold tracking-tighter text-orange-400">Inc</span>
+          <div class="text-xs md:text-sm text-cyan-400 tracking-widest font-medium mt-1">CRYPTO HUB</div>
+        </div>
+      </div>
+
+      <div class="hidden md:flex items-center gap-8 text-sm">
+        <a href="../index.html" class="hover:text-green-400 transition">Home</a>
+        <a href="community.html" class="hover:text-green-400 transition">Community</a>
+        <a href="plans.html" class="hover:text-green-400 transition">Plans</a>
+        <a href="long-term.html" class="hover:text-green-400 transition">Long Term Investment</a>
+        <a href="blog.html" class="hover:text-green-400 transition">Blog</a>
+        <a href="faqs.html" class="hover:text-green-400 transition">FAQs</a>
+        <a href="contact.html" class="hover:text-green-400 transition">Contact Us</a>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <a href="get-started.html" class="bg-green-600 hover:bg-green-500 px-5 py-2 rounded-lg text-sm font-medium">Get Started</a>
+        <a href="login.html" class="text-sm hover:text-green-400">Login</a>
+        <button id="menu-toggle" class="md:hidden text-white focus:outline-none" aria-expanded="false" aria-controls="mobile-menu">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+
+<!-- Fixed Modern Slide-in Mobile Menu - Works from ALL pages -->
+<!-- Fixed Modern Slide-in Menu - Works on ALL pages -->
+<!-- Final Fixed Mobile Menu - Hamburger Works Everywhere -->
+<div id="mobile-menu" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 translate-x-full transition-transform duration-500 ease-in-out">
+  <div class="absolute right-0 top-0 h-full w-4/5 max-w-sm bg-gray-900/95 backdrop-blur-xl border-l border-green-500/30 shadow-2xl overflow-y-auto">
+    <button id="menu-close" class="absolute top-5 right-5 text-white text-3xl focus:outline-none hover:text-green-400 transition">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="px-8 py-20 space-y-8 text-center">
+      <a href="../pages/community.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">Community</a>
+      <a href="../pages/plans.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">Plans</a>
+      <a href="../pages/long-term.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">Long Term Investment</a>
+      <a href="../pages/blog.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">Blog</a>
+      <a href="../pages/faqs.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">FAQs</a>
+      <a href="../pages/contact.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">Contact Us</a>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+    <h1 class="text-5xl font-bold text-center mb-12 neon-green">Get Started – Free Access</h1>
+
+    <div class="glass rounded-3xl p-8 md:p-12 max-w-4xl mx-auto">
+      <p class="text-xl text-center mb-8">
+        Join Bsons Inc Crypto Hub **for free** and get instant access to our Community, basic education, and market discussions.<br>
+        <strong>No credit card needed.</strong> Add a password now so you can upgrade to premium later (bots, signals, etc.).
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <div class="text-center">
+          <i class="fas fa-users text-6xl text-green-400 mb-6"></i>
+          <h3 class="text-2xl font-bold mb-4">Free Community Access</h3>
+          <p class="text-lg">Join discussions, get beginner guides, and connect with traders immediately.</p>
+        </div>
+        <div class="text-center">
+          <i class="fas fa-lock text-6xl text-green-400 mb-6"></i>
+          <h3 class="text-2xl font-bold mb-4">Premium Upgrade Later</h3>
+          <p class="text-lg">After signup, upgrade anytime to unlock automated bots, live signals, and more.</p>
+        </div>
+      </div>
+
+      <!-- Signup Form (with password) -->
+      <form id="get-started-form" class="space-y-6 max-w-lg mx-auto">
+        <div>
+          <label class="block text-lg font-medium mb-2">Full Name</label>
+          <input type="text" required placeholder="John Doe" class="w-full px-6 py-4 rounded-xl bg-gray-900 border border-gray-700 focus:border-green-500 focus:outline-none">
+        </div>
+
+        <div>
+          <label class="block text-lg font-medium mb-2">Email Address</label>
+          <input type="email" required placeholder="you@example.com" class="w-full px-6 py-4 rounded-xl bg-gray-900 border border-gray-700 focus:border-green-500 focus:outline-none">
+        </div>
+
+        <div>
+          <label class="block text-lg font-medium mb-2">Password</label>
+          <input type="password" required placeholder="Create a strong password" class="w-full px-6 py-4 rounded-xl bg-gray-900 border border-gray-700 focus:border-green-500 focus:outline-none">
+        </div>
+
+        <div>
+          <label class="block text-lg font-medium mb-2">Age Range</label>
+          <select required class="w-full px-6 py-4 rounded-xl bg-gray-900 border border-gray-700 focus:border-green-500 focus:outline-none">
+            <option value="">Select...</option>
+            <option>18-24</option>
+            <option>25-34</option>
+            <option>35-44</option>
+            <option>45+</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-lg font-medium mb-2">Crypto Experience Level</label>
+          <select required class="w-full px-6 py-4 rounded-xl bg-gray-900 border border-gray-700 focus:border-green-500 focus:outline-none">
+            <option value="">Select...</option>
+            <option>Beginner (new to crypto)</option>
+            <option>Intermediate (some trading)</option>
+            <option>Advanced (experienced trader)</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-lg font-medium mb-2">Main Investment Goal</label>
+          <textarea rows="3" required placeholder="Example: passive income, wealth building, retirement, learning..." class="w-full px-6 py-4 rounded-xl bg-gray-900 border border-gray-700 focus:border-green-500 focus:outline-none resize-none"></textarea>
+        </div>
+
+        <div>
+          <label class="block text-lg font-medium mb-2">Preferred Coins (optional)</label>
+          <input type="text" placeholder="BTC, ETH, SOL, etc." class="w-full px-6 py-4 rounded-xl bg-gray-900 border border-gray-700 focus:border-green-500 focus:outline-none">
+        </div>
+
+        <div class="text-center mt-10">
+          <button type="submit" class="inline-block bg-green-600 hover:bg-green-500 px-12 py-6 rounded-xl text-2xl font-bold shadow-lg shadow-green-500/30">
+            Create Free Account
+          </button>
+        </div>
+      </form>
+
+      <p class="text-center text-sm text-gray-400 mt-8">
+        Already have an account? <a href="login.html" class="text-green-400 hover:underline">Login here</a>
+      </p>
+    </div>
+  </main>
+
+  <!-- Minimal Footer (logo + copyright only) -->
+<!-- Minimal Footer -->
+<footer class="bg-black/90 border-t border-gray-800 py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+    <img src="../assets/images/logo.png" alt="Bsons Inc" class="h-10 mx-auto mb-4">
+    <p class="text-sm text-gray-500">© 2026 Bsons Inc Crypto Hub. All rights reserved.</p>
+  </div>
+</footer>
+
+  <!-- Success Popup -->
+  <div id="success-popup">
+    <div id="popup-box">
+      <i class="fas fa-check-circle text-6xl text-green-400 mb-6"></i>
+      <h2 class="text-3xl font-bold mb-4 neon-green">Account Created!</h2>
+      <p class="text-lg mb-6">
+        Welcome to Bsons Inc Crypto Hub!<br>
+        You now have free access to the Community.<br>
+        Redirecting to Community page in 5 seconds...<br>
+        <strong>Upgrade to a plan anytime</strong> to unlock bots, signals, and premium features.
+      </p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile menu toggle (your existing code)
+
+    // Get Started Form Submit
+    const getStartedForm = document.getElementById('get-started-form');
+    if (getStartedForm) {
+      getStartedForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const popup = document.getElementById('success-popup');
+        popup.classList.add('visible');
+        setTimeout(() => {
+          popup.classList.remove('visible');
+          window.location.href = "community.html"; // Free users go to Community
+        }, 5000);
+      });
+    }
+  </script>
+
+<!-- Fixed Hamburger Menu Toggle - Works on ALL pages -->
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+
+if (menuToggle && mobileMenu) {
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    console.log('Hamburger clicked!');
+  });
+  
+  document.addEventListener('click', (e) => {
+    if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+      mobileMenu.classList.add('hidden');
+    }
+  });
+}
+</script>
+</body>
+</html>

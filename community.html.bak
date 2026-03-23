@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Community – Bsons Inc Crypto Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    body { background: radial-gradient(circle at center, #0f172a 0%, #020617 80%); color: #e2e8f0; }
+    .glass { background: rgba(15,23,42,0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.08); }
+    .neon-green { color: #10b981; text-shadow: 0 0 10px #10b981; }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      <div class="flex-1 flex justify-center md:justify-start">
+        <div class="text-center md:text-left">
+          <span class="text-3xl md:text-4xl font-bold tracking-tighter bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Bsons</span>
+          <span class="text-3xl md:text-4xl font-bold tracking-tighter text-orange-400">Inc</span>
+          <div class="text-xs md:text-sm text-cyan-400 tracking-widest font-medium mt-1">CRYPTO HUB</div>
+        </div>
+      </div>
+
+      <div class="hidden md:flex items-center gap-8 text-sm">
+        <a href="../index.html" class="hover:text-green-400 transition">Home</a>
+        <a href="community.html" class="hover:text-green-400 transition">Community</a>
+        <a href="plans.html" class="hover:text-green-400 transition">Plans</a>
+        <a href="long-term.html" class="hover:text-green-400 transition">Long Term Investment</a>
+        <a href="blog.html" class="hover:text-green-400 transition">Blog</a>
+        <a href="faqs.html" class="hover:text-green-400 transition">FAQs</a>
+        <a href="contact.html" class="hover:text-green-400 transition">Contact Us</a>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <a href="../pages/get-started.html" class="bg-green-600 hover:bg-green-500 px-5 py-2 rounded-lg text-sm font-medium">Get Started</a>
+        <a href="../pages/login.html" class="text-sm hover:text-green-400">Login</a>
+        <button id="menu-toggle" class="md:hidden text-white focus:outline-none" aria-expanded="false" aria-controls="mobile-menu">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+
+<!-- Modern Slide-in Mobile Menu -->
+<!-- Modern Slide-in Mobile Menu (Fixed Redirects) -->
+<!-- Modern Slide-in Mobile Menu (Fixed for ALL pages) -->
+<!-- Fixed Mobile Menu - Links Work from EVERY page -->
+<!-- Fixed Modern Slide-in Mobile Menu - Works from ALL pages -->
+<!-- Fixed Modern Slide-in Mobile Menu - Works from ALL pages -->
+<!-- Fixed Modern Slide-in Menu - Works on ALL pages -->
+<!-- Final Fixed Mobile Menu - Hamburger Works Everywhere -->
+<div id="mobile-menu" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 translate-x-full transition-transform duration-500 ease-in-out">
+  <div class="absolute right-0 top-0 h-full w-4/5 max-w-sm bg-gray-900/95 backdrop-blur-xl border-l border-green-500/30 shadow-2xl overflow-y-auto">
+    <button id="menu-close" class="absolute top-5 right-5 text-white text-3xl focus:outline-none hover:text-green-400 transition">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="px-8 py-20 space-y-8 text-center">
+      <a href="../pages/community.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">Community</a>
+      <a href="../pages/plans.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">Plans</a>
+      <a href="../pages/long-term.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">Long Term Investment</a>
+      <a href="../pages/blog.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">Blog</a>
+      <a href="../pages/faqs.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">FAQs</a>
+      <a href="../pages/contact.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">Contact Us</a>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+    <h1 class="text-5xl font-bold text-center mb-12 neon-green">Community</h1>
+
+    <div class="glass rounded-3xl p-8 md:p-12">
+      <!-- Hero image -->
+      <img src="../assets/images/community-group.jpg" alt="Bsons Inc Crypto Community members collaborating" class="w-full rounded-2xl mb-8 shadow-2xl shadow-green-900/30" loading="lazy">
+
+      <h2 class="text-3xl font-semibold mb-6 neon-green text-center">Join Our Vibrant Crypto Community</h2>
+      <p class="text-lg mb-6 text-center">
+        Our community is the heart of Bsons Inc — a place where beginners and experienced traders connect, share ideas, learn advanced strategies, and grow together.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-10">
+        <div>
+          <img src="../assets/images/telegram-signals.jpg" alt="Active Telegram group chat with daily signals" class="w-full rounded-xl mb-4" loading="lazy">
+          <p class="text-center font-medium">Real-time discussions & signals</p>
+        </div>
+        <div>
+          <img src="../assets/images/live-mentorship.jpg" alt="Live mentorship session in Bsons Inc Community" class="w-full rounded-xl mb-4" loading="lazy">
+          <p class="text-center font-medium">Live Q&A with experts</p>
+        </div>
+      </div>
+
+      <ul class="list-disc list-inside text-lg mb-8 space-y-3 max-w-3xl mx-auto">
+        <li>Active Telegram & WhatsApp groups for real-time discussions</li>
+        <li>Daily market analysis and trading signals</li>
+        <li>Live Q&A sessions with expert mentors</li>
+        <li>Community challenges and profit-sharing events</li>
+        <li>Exclusive learning paths from beginner to pro</li>
+      </ul>
+
+      <div class="text-center mt-10">
+        <a href="https://t.me/bsonsinccommunity" target="_blank" class="inline-block bg-green-600 hover:bg-green-500 px-10 py-5 rounded-xl text-xl font-medium">
+          Join Community Now (Telegram)
+        </a>
+<!-- Upgrade Teaser - For New Users Redirected from Get Started -->
+<div class="mt-12 text-center border-t border-gray-700 pt-10">
+  <h3 class="text-3xl font-bold mb-6 neon-green">Just Signed Up? Unlock Premium Now</h3>
+  <p class="text-xl text-gray-300 mb-8">
+    Welcome to the Community! You're now part of our free hub.<br>
+    But premium gives you the real edge — upgrade anytime:
+  </p>
+
+  <ul class="max-w-2xl mx-auto text-left text-lg space-y-4 mb-10">
+    <li class="flex items-start">
+      <i class="fas fa-check-circle text-green-400 mr-4 text-2xl mt-1"></i>
+      <span><strong>Automated AI Trading Bots</strong> — trade 24/7 while you sleep</span>
+    </li>
+    <li class="flex items-start">
+      <i class="fas fa-check-circle text-green-400 mr-4 text-2xl mt-1"></i>
+      <span><strong>Live Signals & Real-Time Alerts</strong> — never miss high-probability trades</span>
+    </li>
+    <li class="flex items-start">
+      <i class="fas fa-check-circle text-green-400 mr-4 text-2xl mt-1"></i>
+      <span><strong>Expert Mentorship & Live Q&A</strong> — direct access to pro traders</span>
+    </li>
+    <li class="flex items-start">
+      <i class="fas fa-check-circle text-green-400 mr-4 text-2xl mt-1"></i>
+      <span><strong>Profit-Sharing & Portfolio Tools</strong> — grow faster together</span>
+    </li>
+    <li class="flex items-start">
+      <i class="fas fa-check-circle text-green-400 mr-4 text-2xl mt-1"></i>
+      <span><strong>Priority 24/7 Support & Exclusive Strategies</strong> — VIP treatment</span>
+    </li>
+  </ul>
+
+  <a href="plans.html" class="inline-block bg-purple-600 hover:bg-purple-500 px-12 py-6 rounded-xl text-2xl font-bold shadow-lg shadow-purple-500/40 transition transform hover:scale-105">
+    Continue to Premium Plans →
+  </a>
+
+  <p class="text-sm text-gray-400 mt-6">
+    No pressure — stay free forever or upgrade when ready.
+  </p>
+</div>
+      </div>
+
+      <div class="text-center mt-6">
+        <a href="../index.html" class="text-green-400 hover:underline">← Back to Home</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+<!-- Minimal Footer -->
+<footer class="bg-black/90 border-t border-gray-800 py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+    <img src="../assets/images/logo.png" alt="Bsons Inc" class="h-10 mx-auto mb-4">
+    <p class="text-sm text-gray-500">© 2026 Bsons Inc Crypto Hub. All rights reserved.</p>
+  </div>
+</footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+function closeMenu() { mobileMenu.classList.remove('translate-x-0'); mobileMenu.classList.add('translate-x-full'); }
+
+function closeMenu() {
+  mobileMenu.classList.remove('translate-x-0');
+  mobileMenu.classList.add('translate-x-full');
+}
+
+}
+
+function closeMenu() {
+  mobileMenu.classList.remove('translate-x-0');
+  mobileMenu.classList.add('translate-x-full');
+}
+
+}
+  </script>
+
+<!-- Universal Modern Mobile Menu Upgrade (Works on ALL pages) -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const oldMenu = document.getElementById('mobile-menu');
+  if (!oldMenu) return;
+  const newMenu = document.createElement('div');
+  newMenu.id = 'mobile-menu';
+  newMenu.className = 'fixed inset-0 bg-black/60 backdrop-blur-sm z-50 translate-x-full transition-transform duration-500 ease-in-out';
+  newMenu.innerHTML = `
+    <div class="absolute right-0 top-0 h-full w-4/5 max-w-sm bg-gray-900/95 backdrop-blur-xl border-l border-green-500/30 shadow-2xl overflow-y-auto">
+      <button id="menu-close" class="absolute top-5 right-5 text-white text-3xl focus:outline-none hover:text-green-400 transition">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="px-8 py-20 space-y-8 text-center">
+        <a href="pages/community.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">Community</a>
+        <a href="pages/plans.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">Plans</a>
+        <a href="pages/long-term.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">Long Term Investment</a>
+        <a href="pages/blog.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">Blog</a>
+        <a href="pages/faqs.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">FAQs</a>
+        <a href="pages/contact.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">Contact Us</a>
+      </div>
+    </div>
+  `;
+  oldMenu.replaceWith(newMenu);
+function closeMenu() { mobileMenu.classList.remove('translate-x-0'); mobileMenu.classList.add('translate-x-full'); }
+  function closeMenu() { mobileMenu.classList.remove('translate-x-0'); mobileMenu.classList.add('translate-x-full'); }
+  console.log('Modern mobile menu activated!');
+});
+</script>
+cd "Bsons Inc Crypto Hub"
+for file in pages/*.html; do
+  sed -i '/<\/body>/i \
+<!-- Final Menu Redirect Fix - Works on ALL pages -->\
+<script>\
+document.addEventListener('"'"'DOMContentLoaded'"'"', () => {\
+  const mobileMenu = document.getElementById('"'"'mobile-menu'"'"');\
+  if (!mobileMenu) return;\
+  const links = mobileMenu.querySelectorAll('"'"'a'"'"');\
+  links.forEach(link => {\
+    let href = link.getAttribute('"'"'href'"'"');\
+    if (href) {\
+      if (window.location.pathname.includes('"'"'/pages/'"'"')) {\
+        if (!href.startsWith('"'"'../pages/'"'"') && href.startsWith('"'"'pages/'"'"')) {\
+          link.setAttribute('"'"'href'"'"', '"'"'../'"'"' + href);\
+        }\
+      } else {\
+        if (!href.startsWith('"'"'/pages/'"'"') && href.startsWith('"'"'pages/'"'"')) {\
+          link.setAttribute('"'"'href'"'"', '"'"'/'"'"' + href);\
+        }\
+      }\
+    }\
+  });\
+  links.forEach(link => {\
+    link.addEventListener('"'"'click'"'"', (e) => {\
+      console.log('"'"'Menu clicked: '"'"', link.textContent, '"'"'→'"'"', link.href);\
+    });\
+  });\
+  console.log('"'"'Mobile menu redirects FIXED!'"'"');\
+});\
+<\/script>' "$file"
+  echo "Fixed: $file"
+done
+echo "All pages updated! Restart server and test menu."
+<!-- Fixed Menu Script + Universal Popups -->
+<script>
+
+function closeMenu() {
+  mobileMenu.classList.remove('translate-x-0');
+  mobileMenu.classList.add('translate-x-full');
+}
+
+if (menuToggle) menuToggle.addEventListener('click', openMenu);
+if (menuClose) menuClose.addEventListener('click', closeMenu);
+
+if (mobileMenu) {
+  mobileMenu.addEventListener('click', (e) => {
+    if (e.target === mobileMenu) closeMenu();
+  });
+}
+function closeMenu() { mobileMenu.classList.remove('translate-x-0'); mobileMenu.classList.add('translate-x-full'); }
+if (menuToggle) menuToggle.addEventListener('click', openMenu);
+if (menuClose) menuClose.addEventListener('click', closeMenu);
+if (mobileMenu) { mobileMenu.addEventListener('click', (e) => { if (e.target === mobileMenu) closeMenu(); }); }
+function closeMenu() { mobileMenu.classList.remove('translate-x-0'); mobileMenu.classList.add('translate-x-full'); }
+if (menuToggle) menuToggle.addEventListener('click', openMenu);
+if (menuClose) menuClose.addEventListener('click', closeMenu);
+if (mobileMenu) { mobileMenu.addEventListener('click', (e) => { if (e.target === mobileMenu) closeMenu(); }); }
+
+function closeMenu() {
+  mobileMenu.classList.remove('translate-x-0');
+  mobileMenu.classList.add('translate-x-full');
+}
+
+if (menuToggle) menuToggle.addEventListener('click', openMenu);
+if (menuClose) menuClose.addEventListener('click', closeMenu);
+
+if (mobileMenu) {
+  mobileMenu.addEventListener('click', (e) => {
+    if (e.target === mobileMenu) closeMenu();
+  });
+}
+
+function closeMenu() {
+  mobileMenu.classList.remove('translate-x-0');
+  mobileMenu.classList.add('translate-x-full');
+}
+
+if (menuToggle) menuToggle.addEventListener('click', openMenu);
+if (menuClose) menuClose.addEventListener('click', closeMenu);
+
+if (mobileMenu) {
+  mobileMenu.addEventListener('click', (e) => {
+    if (e.target === mobileMenu) closeMenu();
+  });
+}
+
+function closeMenu() {
+  mobileMenu.classList.remove('translate-x-0');
+  mobileMenu.classList.add('translate-x-full');
+}
+
+if (menuToggle) menuToggle.addEventListener('click', openMenu);
+if (menuClose) menuClose.addEventListener('click', closeMenu);
+
+if (mobileMenu) {
+  mobileMenu.addEventListener('click', (e) => {
+    if (e.target === mobileMenu) closeMenu();
+  });
+}
+
+/* Universal Popup for ALL forms */
+function showPopup(message) {
+  const popup = document.createElement('div');
+  popup.innerHTML = `
+    <div class="fixed inset-0 bg-black/85 flex items-center justify-center z-50">
+      <div class="bg-[#0f172a] border-4 border-[#10b981] w-11/12 max-w-lg p-8 md:p-12 text-center shadow-[0_0_50px_rgba(16,185,129,0.6)]">
+        <i class="fas fa-check-circle text-6xl text-green-400 mb-6"></i>
+        <h2 class="text-3xl font-bold mb-4 neon-green">Success!</h2>
+        <p class="text-lg mb-6">${message}</p>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(popup);
+  setTimeout(() => popup.remove(), 5000);
+}
+
+/* Attach to all forms */
+document.querySelectorAll('form').forEach(form => {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    showPopup('Request sent! Our team will contact you soon.');
+    form.reset();
+  });
+});
+</script>
+<!-- Universal Smart Popup - Custom Message for Each Button/Form -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Shared popup function
+  function showPopup(title, message) {
+    const popup = document.createElement('div');
+    popup.innerHTML = `
+      <div class="fixed inset-0 bg-black/85 flex items-center justify-center z-50">
+        <div class="bg-[#0f172a] border-4 border-[#10b981] w-11/12 max-w-lg p-8 md:p-12 text-center shadow-[0_0_50px_rgba(16,185,129,0.6)]">
+          <i class="fas fa-check-circle text-6xl text-green-400 mb-6"></i>
+          <h2 class="text-3xl font-bold mb-4 neon-green">${title}</h2>
+          <p class="text-lg mb-6">${message}</p>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(popup);
+    setTimeout(() => popup.remove(), 5000); // Auto-fade after 5 seconds
+  }
+
+  // 1. Login Form
+  const loginForm = document.getElementById('login-form');
+  if (loginForm) {
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      showPopup('Login Successful!', 'Welcome back!<br>Redirecting to your Plans page...');
+      setTimeout(() => window.location.href = "plans.html", 5000);
+    });
+  }
+
+  // 2. Get Started / Sign Up Form
+  const getStartedForm = document.getElementById('get-started-form');
+  if (getStartedForm) {
+    getStartedForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      showPopup('Account Created!', 'Welcome to Bsons Inc!<br>Check your email to verify and start.');
+      setTimeout(() => window.location.href = "plans.html", 5000);
+    });
+  }
+
+  // 3. Custom Request Form
+  const customForm = document.getElementById('custom-request-form');
+  if (customForm) {
+    customForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      showPopup('Custom Request Sent!', 'Our team will contact you within 24 hours with a personalized quote.');
+      customForm.reset();
+    });
+  }
+
+  // 4. Long Term Investment Form
+  const longTermForm = document.getElementById('long-term-form');
+  if (longTermForm) {
+    longTermForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      showPopup('Long-Term Request Sent!', 'Our team will contact you within 48 hours with your strategy.');
+      longTermForm.reset();
+    });
+  }
+
+  // 5. Newsletter Subscribe (on index.html)
+  const newsletterForm = document.getElementById('newsletter-form');
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      showPopup('Subscribed!', 'Thank you! Check your email for confirmation and updates.');
+      newsletterForm.reset();
+    });
+  }
+
+  // 6. Contact Form (on contact or index)
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      showPopup('Message Sent!', 'Thank you! We will get back to you soon.');
+      contactForm.reset();
+    });
+  }
+
+  // 7. Plan Selection Buttons on Plans page
+  document.querySelectorAll('a[onclick^="selectPlan"], a[href="#"]:not([onclick])').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const planText = btn.textContent.trim() || btn.closest('.glass').querySelector('h3').textContent.trim();
+      showPopup('Plan Selected!', `${planText} chosen!<br>Redirecting to checkout...`);
+      setTimeout(() => window.location.href = "checkout.html", 3000);
+    });
+  });
+});
+</script>
+
+<!-- Fixed Hamburger Menu Toggle - Works on ALL pages -->
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+
+if (menuToggle && mobileMenu) {
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    console.log('Hamburger clicked!');
+  });
+  
+  document.addEventListener('click', (e) => {
+    if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+      mobileMenu.classList.add('hidden');
+    }
+  });
+}
+</script>
+</body>
+</html>

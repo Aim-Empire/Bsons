@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login – Bsons Inc Crypto Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    body { background: radial-gradient(circle at center, #0f172a 0%, #020617 80%); color: #e2e8f0; min-height: 100vh; }
+    .glass { background: rgba(15,23,42,0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.08); }
+    .neon-green { color: #10b981; text-shadow: 0 0 10px #10b981; }
+
+    /* Popup */
+    .popup-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease;
+    }
+    .popup-overlay.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .popup-content {
+      background: #0f172a;
+      border: 3px solid #10b981;
+      width: 90%;
+      max-width: 520px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 0 40px rgba(16, 185, 129, 0.6);
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      <div class="flex-1 flex justify-center md:justify-start">
+        <div class="text-center md:text-left">
+          <span class="text-3xl md:text-4xl font-bold tracking-tighter bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Bsons</span>
+          <span class="text-3xl md:text-4xl font-bold tracking-tighter text-orange-400">Inc</span>
+          <div class="text-xs md:text-sm text-cyan-400 tracking-widest font-medium mt-1">CRYPTO HUB</div>
+        </div>
+      </div>
+
+      <div class="hidden md:flex items-center gap-8 text-sm">
+        <a href="../index.html" class="hover:text-green-400 transition">Home</a>
+        <a href="community.html" class="hover:text-green-400 transition">Community</a>
+        <a href="plans.html" class="hover:text-green-400 transition">Plans</a>
+        <a href="long-term.html" class="hover:text-green-400 transition">Long Term Investment</a>
+        <a href="blog.html" class="hover:text-green-400 transition">Blog</a>
+        <a href="faqs.html" class="hover:text-green-400 transition">FAQs</a>
+        <a href="contact.html" class="hover:text-green-400 transition">Contact Us</a>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <a href="get-started.html" class="bg-green-600 hover:bg-green-500 px-5 py-2 rounded-lg text-sm font-medium">Get Started</a>
+        <a href="login.html" class="text-sm hover:text-green-400">Login</a>
+        <button id="menu-toggle" class="md:hidden text-white focus:outline-none" aria-expanded="false" aria-controls="mobile-menu">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 translate-x-full transition-transform duration-500 ease-in-out">
+      <div class="absolute right-0 top-0 h-full w-4/5 max-w-sm bg-gray-900/95 backdrop-blur-xl border-l border-green-500/30 shadow-2xl overflow-y-auto">
+        <button id="menu-close" class="absolute top-5 right-5 text-white text-3xl focus:outline-none hover:text-green-400 transition">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="px-8 py-20 space-y-8 text-center">
+          <a href="../pages/community.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">Community</a>
+          <a href="../pages/plans.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">Plans</a>
+          <a href="../pages/long-term.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">Long Term Investment</a>
+          <a href="../pages/blog.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">Blog</a>
+          <a href="../pages/faqs.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">FAQs</a>
+          <a href="../pages/contact.html" class="block text-xl font-medium text-gray-200 hover:text-green-400 transition-all duration-300 transform hover:scale-105 hover:font-semibold">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Login Form -->
+  <div class="flex-1 flex items-center justify-center px-4 py-20">
+    <div class="glass rounded-3xl p-8 md:p-12 w-full max-w-md">
+      <h1 class="text-4xl font-bold text-center mb-10 neon-green">Login</h1>
+
+      <form id="login-form" class="space-y-6">
+        <div>
+          <label class="block text-lg font-medium mb-2">Email Address</label>
+          <input type="email" id="email" required placeholder="you@example.com" class="w-full px-6 py-4 rounded-xl bg-gray-900 border border-gray-700 focus:border-green-500 focus:outline-none">
+        </div>
+
+        <div>
+          <label class="block text-lg font-medium mb-2">Password</label>
+          <input type="password" id="password" required placeholder="Your password" class="w-full px-6 py-4 rounded-xl bg-gray-900 border border-gray-700 focus:border-green-500 focus:outline-none">
+        </div>
+
+        <div class="text-center">
+          <a href="#" onclick="openForgotModal()" class="text-green-400 hover:underline text-sm">Forgot password?</a>
+        </div>
+
+        <div class="text-center mt-8">
+          <button type="submit" class="w-full bg-green-600 hover:bg-green-500 py-4 rounded-xl text-xl font-bold">
+            Sign In
+          </button>
+        </div>
+
+        <p class="text-center text-sm text-gray-400 mt-6">
+          Don't have an account? <a href="get-started.html" class="text-green-400 hover:underline">Create one here</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Forgot Password Modal -->
+  <div id="forgot-modal" class="fixed inset-0 bg-black/80 flex items-center justify-center z-50 hidden">
+    <div class="glass rounded-3xl p-8 max-w-md w-full">
+      <h2 class="text-3xl font-bold mb-6 neon-green text-center">Reset Password</h2>
+      <p class="text-center mb-6 text-gray-300">Enter your email to receive a reset link.</p>
+
+      <form id="reset-form" class="space-y-6">
+        <input type="email" id="reset-email" required placeholder="Email address" class="w-full px-6 py-4 rounded-xl bg-gray-900 border border-gray-700 focus:border-green-500 focus:outline-none">
+        <button type="submit" class="w-full bg-green-600 hover:bg-green-500 py-4 rounded-xl font-bold">
+          Send Reset Link
+        </button>
+      </form>
+
+      <button onclick="closeForgotModal()" class="mt-6 text-green-400 hover:underline w-full text-center block">
+        Close
+      </button>
+    </div>
+  </div>
+
+  <!-- Login Success Popup -->
+  <div id="success-popup" class="popup-overlay">
+    <div class="rect-box">
+      <i class="fas fa-check-circle text-6xl text-green-400 mb-6"></i>
+      <h2 class="text-3xl font-bold mb-4 neon-green">Login Successful!</h2>
+      <p class="text-lg mb-6">Welcome back!<br>Redirecting to your Dashboard in 5 seconds...</p>
+    </div>
+  </div>
+
+  <!-- Reset Success Popup -->
+  <div id="reset-success-popup" class="popup-overlay">
+    <div class="rect-box">
+      <i class="fas fa-check-circle text-6xl text-green-400 mb-6"></i>
+      <h2 class="text-3xl font-bold mb-4 neon-green">Reset Link Sent!</h2>
+      <p class="text-lg mb-6">Check your email for the password reset link.</p>
+    </div>
+  </div>
+
+  <!-- Minimal Footer -->
+  <footer class="bg-black/90 border-t border-gray-800 py-8 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+      <img src="../assets/images/logo.png" alt="Bsons Inc" class="h-10 mx-auto mb-4">
+      <p class="text-sm text-gray-500">© 2026 Bsons Inc Crypto Hub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuClose = document.getElementById('menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    function openMenu() {
+      mobileMenu.classList.remove('translate-x-full');
+      mobileMenu.classList.add('translate-x-0');
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.remove('translate-x-0');
+      mobileMenu.classList.add('translate-x-full');
+    }
+
+    if (menuToggle) menuToggle.addEventListener('click', openMenu);
+    if (menuClose) menuClose.addEventListener('click', closeMenu);
+
+    if (mobileMenu) {
+      mobileMenu.addEventListener('click', (e) => {
+        if (e.target === mobileMenu) closeMenu();
+      });
+    }
+
+    // Login Form Submit - Redirect to Dashboard
+    const loginForm = document.getElementById('login-form');
+    if (loginForm) {
+      loginForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const popup = document.getElementById('success-popup');
+        popup.classList.add('visible');
+        setTimeout(() => {
+          popup.classList.remove('visible');
+          window.location.href = "pages/dashboard.html"; // Fixed redirect to dashboard
+        }, 5000);
+      });
+    }
+
+    // Forgot Password Modal
+    function openForgotModal() {
+      document.getElementById('forgot-modal').classList.remove('hidden');
+    }
+
+    function closeForgotModal() {
+      document.getElementById('forgot-modal').classList.add('hidden');
+    }
+
+    // Reset Form Submit
+    const resetForm = document.getElementById('reset-form');
+    if (resetForm) {
+      resetForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const resetPopup = document.getElementById('reset-success-popup');
+        resetPopup.classList.add('visible');
+        setTimeout(() => {
+          resetPopup.classList.remove('visible');
+          closeForgotModal();
+        }, 5000);
+      });
+    }
+  </script>
+
+  <!-- Forgot Password Modal -->
+  <div id="forgot-modal" class="fixed inset-0 bg-black/80 flex items-center justify-center z-50 hidden">
+    <div class="glass rounded-3xl p-8 max-w-md w-full">
+      <h2 class="text-3xl font-bold mb-6 neon-green text-center">Reset Password</h2>
+      <p class="text-center mb-6 text-gray-300">Enter your email to receive a reset link.</p>
+
+      <form id="reset-form" class="space-y-6">
+        <input type="email" id="reset-email" required placeholder="Email address" class="w-full px-6 py-4 rounded-xl bg-gray-900 border border-gray-700 focus:border-green-500 focus:outline-none">
+        <button type="submit" class="w-full bg-green-600 hover:bg-green-500 py-4 rounded-xl font-bold">
+          Send Reset Link
+        </button>
+      </form>
+
+      <button onclick="closeForgotModal()" class="mt-6 text-green-400 hover:underline w-full text-center block">
+        Close
+      </button>
+    </div>
+  </div>
+
+  <!-- Reset Success Popup -->
+  <div id="reset-success-popup" class="popup-overlay">
+    <div class="rect-box">
+      <i class="fas fa-check-circle text-6xl text-green-400 mb-6"></i>
+      <h2 class="text-3xl font-bold mb-4 neon-green">Reset Link Sent!</h2>
+      <p class="text-lg mb-6">Check your email for the password reset link.</p>
+    </div>
+  </div>
+
+  <!-- Login Success Popup -->
+  <div id="success-popup" class="popup-overlay">
+    <div class="rect-box">
+      <i class="fas fa-check-circle text-6xl text-green-400 mb-6"></i>
+      <h2 class="text-3xl font-bold mb-4 neon-green">Login Successful!</h2>
+      <p class="text-lg mb-6">Welcome back!<br>Redirecting to your Dashboard in 5 seconds...</p>
+    </div>
+  </div>
+
+</body>
+</html>
